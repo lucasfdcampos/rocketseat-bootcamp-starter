@@ -6,7 +6,7 @@
   </head>
   <body>
     <script>
-      /*
+    /*
     1º exercício
     Crie uma função que dado o objeto a seguir:
 
@@ -36,7 +36,7 @@
     ', na rua \"' + endereco.rua + '\" com nº ' + endereco.numero);
     */
 
-      /*
+    /*
     2º exercício
     Crie uma função que dado um intervalo (entre x e y) exiba todos número pares:
     function pares(x, y) {
@@ -61,7 +61,7 @@
     pares(32, 321);
     */
 
-      /*
+    /*
     3º exercício
     Escreva uma função que verifique se o vetor de habilidades passado possui a habilidade "Javascript"
     e retorna um booleano true/false caso exista ou não.
@@ -107,6 +107,7 @@
     // De 7 acima: Jedi Master
 
     // Solução:
+
     function experiencia(anos) {
       if (anos <= 1) {
         return 'Iniciante';
@@ -128,13 +129,49 @@
     console.log(resultado);
     */
 
+    /*
+    5º exercício
+    Dado o seguinte vetor de objetos:
     
+    var usuarios = [
+      {
+        nome: "Diego",
+        habilidades: ["Javascript", "ReactJS", "Redux"]
+      },
+      {
+        nome: "Gabriel",
+        habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+      }
+    ];
+    Escreva uma função que produza o seguinte resultado:
 
-    
+    O Diego possui as habilidades: Javascript, ReactJS, Redux
+    O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
 
+    Dica: Para percorrer um vetor você deve utilizar a sintaxe for...of e para unir valores de um array
+    com um separador utilize o join.
 
+    // Solução:
 
+    var usuarios = [
+      {
+        nome: "Diego",
+        habilidades: ["Javascript", "ReactJS", "Redux"],
+      },
+      {
+        nome: "Gabriel",
+        habilidades: ["VueJS", "Ruby on Rails", "Elixir"],
+      },
+    ];
 
+    for (const valor of usuarios) {
+      var nome = valor.nome;
+
+      var habilidades = valor.habilidades.join(', ');
+
+      console.log('O '+ nome + ' possui as habilidades: ' + habilidades);
+    }
+    */
     </script>
   </body>
 </html>
