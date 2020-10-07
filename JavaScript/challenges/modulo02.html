@@ -5,11 +5,10 @@
     <title>Exercícios: Módulo 01</title>
   </head>
   <body>
-    <!--
     <div id="app">
       <button class="botao">Adicionar quadrado</button>
     </div>
-    -->
+
     <script>
       /*
       1º exercício
@@ -36,10 +35,53 @@
       }; 
       */
 
+      /*
+      2º exercício
+      Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de
+      algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
       
+      function getRandomColor() {
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+      for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+      }
+      var newColor = getRandomColor(); // #E943F0
 
+      // Solução:
+      var btnElement = document.querySelector('button.botao');
+      let contador = 0;
 
+      btnElement.onclick = function () {
+        contador++;
+        var divElement = document.createElement('div');
+        divElement.setAttribute('class', 'box' + contador);
 
+        divElement.style.backgroundColor = '#F00';
+        divElement.style.width = '100px';
+        divElement.style.height = '100px';
+        divElement.style.marginTop = '2px';
+
+        var containerElement = document.querySelector('#app');
+        containerElement.appendChild(divElement);
+
+        divElement.onmouseover = function () {
+          var newColor = getRandomColor(); // #E943F0
+          divElement.style.backgroundColor = newColor;          
+        };
+      };
+
+      function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+      */
     </script>
   </body>
 </html>
