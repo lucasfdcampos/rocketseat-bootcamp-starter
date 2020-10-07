@@ -7,6 +7,12 @@
   <body>
     <div id="app">
       <!-- <button class="botao">Adicionar quadrado</button> -->
+
+      <!--
+      <input type="text" name="nome" />
+
+      <button onClick="adicionar()">Adicionar</button>
+      -->
     </div>
 
     <script>
@@ -111,6 +117,57 @@
 
       var containerElement = document.querySelector('#app');
       containerElement.appendChild(unorderedListElement);
+      */
+
+      /*
+      4º exercício
+      Seguindo o resultado do exercício anterior adicione um input em tela e um botão como a seguir:
+
+      <input type="text" name="nome">
+
+      <button onClick="adicionar()">Adicionar</button>
+
+      Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista de
+      nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos
+      demais itens anteriores. Além disso, o conteúdo do input deve ser apagado após o clique.
+
+      Solução: 
+
+      var nomes = ['Diego', 'Gabriel', 'Lucas'];      
+
+      var unorderedListElement = document.createElement('ul');
+
+      for (var i = 0; i < nomes.length; i++) {        
+        var listItemElement = document.createElement('li');
+        listItemElement.setAttribute('class', 'nome_' + nomes[i]);
+        textElement = document.createTextNode(nomes[i]);
+        listItemElement.appendChild(textElement);
+
+        unorderedListElement.appendChild(listItemElement);
+      }
+
+      var containerElement = document.querySelector('#app');
+      containerElement.appendChild(unorderedListElement);
+
+      var inputElement = document.querySelector('input[name=nome]');
+      
+      function adicionar() {
+        var text = inputElement.value;
+        if (!text) {
+          alert('nome em branco');
+          return;
+        }
+
+        nomes.push(text);
+        inputElement.value = '';
+        
+        var listItemElement = document.createElement('li');
+        listItemElement.setAttribute('class', 'nome_' + text);
+        textElement = document.createTextNode(text);
+        listItemElement.appendChild(textElement);
+
+        unorderedListElement.appendChild(listItemElement);
+      }
       */
     </script>
   </body>
