@@ -5,6 +5,11 @@
     <title>Exercícios: Módulo 01</title>
   </head>
   <body>
+    <!--
+    <div id="app">
+      <button class="botao">Adicionar quadrado</button>
+    </div>
+    -->
     <script>
       /*
       1º exercício
@@ -12,10 +17,29 @@
       vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
       aparecer na tela.
 
-      // Solução:      
+      // Solução: 
+      var btnElement = document.querySelector('button.botao');
+      let contador = 0;
+
+      btnElement.onclick = function () {
+        contador++;
+        var divElement = document.createElement('div');
+        divElement.setAttribute('class', 'box' + contador);
+
+        divElement.style.backgroundColor = '#F00';
+        divElement.style.width = "100px";
+        divElement.style.height = "100px";
+        divElement.style.marginTop = "2px";
+
+        var containerElement = document.querySelector('#app');
+        containerElement.appendChild(divElement);
+      }; 
       */
 
       
+
+
+
     </script>
   </body>
 </html>
