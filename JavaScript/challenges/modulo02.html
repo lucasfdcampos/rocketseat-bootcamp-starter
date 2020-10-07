@@ -6,7 +6,7 @@
   </head>
   <body>
     <div id="app">
-      <button class="botao">Adicionar quadrado</button>
+      <!-- <button class="botao">Adicionar quadrado</button> -->
     </div>
 
     <script>
@@ -81,6 +81,36 @@
         }
         return color;
       }
+      */
+
+      /*
+      3º exercício
+      A partir do seguinte vetor:
+
+      var nomes = ["Diego", "Gabriel", "Lucas"];
+
+      Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+      ● Diego
+      ● Gabriel
+      ● Lucas
+
+      // Solução:
+
+      var nomes = ['Diego', 'Gabriel', 'Lucas'];
+
+      var unorderedListElement = document.createElement('ul');
+
+      for (var i = 0; i < nomes.length; i++) {
+        var listItemElement = document.createElement('li');
+        listItemElement.setAttribute('class', 'nome_' + nomes[i]);
+        textElement = document.createTextNode(nomes[i]);
+        listItemElement.appendChild(textElement);
+
+        unorderedListElement.appendChild(listItemElement);
+      }
+
+      var containerElement = document.querySelector('#app');
+      containerElement.appendChild(unorderedListElement);
       */
     </script>
   </body>
