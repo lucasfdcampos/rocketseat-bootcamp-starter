@@ -11,6 +11,7 @@ xhr.onreadystatechange = function () {
 };
 */
 
+/*
 var minhaPromise = function () {
   return new Promise(function (resolve, reject) {
     var xhr = new XMLHttpRequest();
@@ -28,10 +29,12 @@ var minhaPromise = function () {
     };
   });
 };
+*/
 
-minhaPromise()
+axios
+  .get('https://api.github.com/users/lucasfdcampos')
   .then(function (response) {
-    console.log(response);
+    console.log(response.data.avatar_url);
   })
   .catch(function (error) {
     console.warn(error);
