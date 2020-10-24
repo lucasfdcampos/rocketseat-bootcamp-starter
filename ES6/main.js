@@ -1,5 +1,10 @@
-const usuario = { nome: 'Diego' };
+function teste(x) {
+  let y = 2;
 
-usuario.nome = 'Lucas';
+  if (x > 5) {
+    let y = 4;
+    console.log(x, y);
+  }
+}
 
-console.log(usuario);
+teste(10);
