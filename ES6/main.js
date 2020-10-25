@@ -1,3 +1,4 @@
+// REST
 const usuario = {
   nome: 'Lucas',
   idade: 29,
@@ -22,3 +23,21 @@ function soma(a, b, ...params) {
 }
 
 console.log(soma(1, 3, 4));
+
+// SPREAD
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+
+const arr3 = [...arr1, ...arr2];
+
+console.log(arr3);
+
+const usuario1 = {
+  nome: 'Lucas',
+  idade: 29,
+  empresa: 'Deva Cardans',
+};
+
+const usuario2 = { ...usuario1, nome: 'Diego' };
+
+console.log(usuario2);
