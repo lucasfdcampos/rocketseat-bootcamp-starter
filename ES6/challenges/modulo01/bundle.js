@@ -1,5 +1,17 @@
 "use strict";
 
-var usuario = 'Diego';
+var nome = 'Diego';
 var idade = 23;
-console.log("O usu\xE1rio ".concat(usuario, " possui ").concat(idade, " anos"));
+/*
+const usuario = {
+ nome: nome,
+ idade: idade,
+ cidade: 'Rio do Sul',
+};*/
+
+var usuario = {
+  nome: nome,
+  idade: idade,
+  cidade: 'Rio do Sul'
+};
+console.log(usuario);
