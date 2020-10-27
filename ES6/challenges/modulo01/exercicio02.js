@@ -34,5 +34,7 @@ console.log(usersGoogle);
 const usersSenior = usuarios
   .map((users) => ({ ...users, idade: users.idade * 2 }))
   .filter((users) => users.idade <= 50);
-
 console.log(usersSenior);
+
+// Spread operator para mater os dados e substituir apenas a idade e depois
+// utiliza-se o filter
