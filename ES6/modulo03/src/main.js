@@ -5,10 +5,13 @@ const minhaPromise = () =>
     }, 2000);
   });
 
-async function executaPromise() {
-  const response = await minhaPromise();
+// async function executaPromise() {
+//   console.log(await minhaPromise());
+// }
 
-  console.log(response);
-}
+// arrow function
+const executaPromise = async () => {
+  console.log(await minhaPromise());
+};
 
 executaPromise();
