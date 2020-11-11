@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-<<<<<<< HEAD
 class Api {
   static async getUserInfo(username) {
     try {
@@ -14,15 +13,4 @@ class Api {
     }    
   }
 }
-=======
-// async function executaPromise() {
-//   console.log(await minhaPromise());
-// }
 
-// arrow function
-const executaPromise = async () => {
-  console.log(await minhaPromise());
-};
->>>>>>> a7e7281ab8976542dab5626fdfdf1f1d0c114a5e
-
-Api.getUserInfo('lucasfdcampos');
