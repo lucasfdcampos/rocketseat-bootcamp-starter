@@ -37,3 +37,15 @@ class Github {
 
 Github.getRepositories('lucasfdcampos/rocketseat-bootcamp-starter');
 Github.getRepositories('lucasfdcampos/rocketseat-bootcamp-advanced');
+
+// 1.4
+const buscaUsuario = async usuario => {
+  try {
+    const response = await axios.get(`https://api.github.com/users/${usuario}`);
+    console.log(response.data);
+  } catch (err) {
+    console.log('Usuário não existe');
+  }
+}
+
+buscaUsuario('lucasfdcampos');
