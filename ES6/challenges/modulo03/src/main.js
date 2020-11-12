@@ -10,3 +10,15 @@ const umPorSegundo = async () => {
 }
 
 umPorSegundo();
+
+// 1.2
+const getUserFromGitHub = async (user) => {
+  try {
+    const response = await axios.get(`https://api.github.com/users/${user}`);
+    console.log(response.data);
+  } catch (err) {
+    console.log('Usuário não existe.');
+  }
+}
+
+getUserFromGitHub('lucasfdcampos');
